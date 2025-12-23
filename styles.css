@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;600;400;900&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Масштабирование для десктопа */
+@media (min-width: 651px) {
+    .container {
+        transform: scale(0.75);
+        transform-origin: top center;
+    }
+}
+
+.container {
+    background: linear-gradient(132deg, #20021e 38%, #ff2323 120%);
+    box-shadow: 0 0 64px 0 #be1e1e80;
+    border-radius: 44px;
+    padding: 56px 56px 46px 56px;
+    text-align: center;
+    max-width: 780px;
+    width: 90vw;
+    min-width: 344px;
+    animation: fadein 1.05s cubic-bezier(.4,1.8,.7,1.04);
+    border: 2.8px solid #450009;
+    margin: 3vw auto;
+}
+
+@keyframes fadein {
+    from { opacity: 0; transform: scale(.95);}
+    to   { opacity: 1; transform: scale(1);}
+}
+
+.avatar-wrapper {
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: center;
+}
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 6px solid #ff2323;
+    box-shadow: 0 2px 32px #ff232399, 0 0 0 8px #121212;
+    object-fit: cover;
+    background: #2c2c2c;
+    transition: box-shadow 0.23s, transform 0.18s;
+}
+.avatar:hover {
+    box-shadow: 0 6px 42px #ff2323f0, 0 0 0 8px #232323;
+    transform: scale(1.03) rotate(-2deg);
+}
+
+.title {
+    color: #ffe7e7;
+    font-size: 2.8rem;
+    letter-spacing: 0.14em;
+    margin: 0 0 7px 0;
+    font-weight: 900;
+    text-shadow: 0 2px 24px #b10012b0, 0 1px 0 #610c23;
+    text-transform: lowercase;
+    letter-spacing: .22em;
+}
+.subtitle {
+    background: linear-gradient(90deg, #ff2323 30%, #fff 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #ff2323;
+    font-size: 1.27rem;
+    font-weight: 600;
+    margin: 0 0 31px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-shadow: 0 2px 16px #3a001288, 0 0px 1px #ff2323;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 54px;
+    margin: 25px 0 0 0;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #232323;
+    transition: background 0.18s, box-shadow 0.21s, transform 0.12s, border 0.16s;
+    border: 4px solid #ff2323;
+    box-shadow: 0 0 25px #ff232341, 0 2px 32px #00000027;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.icon-link svg {
+    display: block;
+    width: 94px;
+    height: 94px;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
+    z-index: 2;
+}
+.icon-link-github:hover, .icon-link-github:focus {
+    background: linear-gradient(110deg, #171515 80%, #bfbfbf 200%);
+    box-shadow: 0 0 60px #fff1, 0 2px 36px #0008;
+    border-color: #ffffff;
+    transform: scale(1.08) rotate(-2deg);
+}
+.icon-link-telegram:hover, .icon-link-telegram:focus {
+    background: linear-gradient(90deg, #2aabee 70%, #fff 105%);
+    border-color: #2aabee;
+    box-shadow: 0 0 40px #75e4ff8c, 0 2px 36px #000a;
+    transform: scale(1.09) rotate(3deg);
+}
+.icon-link-tiktok:hover, .icon-link-tiktok:focus {
+    background: linear-gradient(100deg, #161616 50%, #ff0050 120%);
+    border-color: #e21a5d;
+    box-shadow: 0 0 50px #fd357eaa, 0 3px 34px #1212;
+    transform: scale(1.12) rotate(-5deg);
+}
+
+.about-block {
+    margin-top: 42px;
+    text-align: center;
+}
+.about-message {
+    font-size: 1.38rem;
+    font-weight: 700;
+    color: #ffe6e6;
+    line-height: 2.1;
+    word-break: break-word;
+    text-align: center;
+    letter-spacing: .025em;
+    margin-bottom: 35px;
+    padding: 0 8px 0 8px;
+    border-radius: 18px;
+    background: rgba(32,0,17,0.25);
+    box-shadow: 0 2px 16px #3d0b08a8;
+    border: 1.8px solid #ff232366;
+    display: inline-block;
+    max-width: 700px;
+    width: 98%;
+}
+.about-line-ru {
+    display: block;
+    margin-bottom: 0.85em;
+    font-weight: 800;
+}
+.about-line-en {
+    display: block;
+    margin-top: 0.70em;
+    font-size: 1.17rem;
+    font-weight: 700;
+    color: #ffbbbb;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 16px #ff232345;
+}
+.fade {
+    color: #ffb8b8;
+    font-style: italic;
+    font-weight: 800;
+    text-shadow: 0 1px 5px #fc7f7f;
+}
+.red-gradient {
+    background: linear-gradient(95deg, #ff2323 50%, #ffb4b4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 1px 15px #ff232366;
+    font-weight: 900;
+}
+
+.between-divider {
+    margin: 30px auto 24px auto;
+    border-top: 0;
+    height: 3.6px;
+    background: linear-gradient(90deg, #fff 0%, #ff2323 55%, #121212 100%);
+    border-radius: 3.6px;
+    box-shadow: 0 2px 18px #ff232375;
+    opacity: .99;
+    width: 96%;
+    max-width: 670px;
+}
+
+.tg-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff2323 0%, #221e1f 40%, #fff 70%, #ff2323 100%);
+    background-size: 300% 100%;
+    background-position: left;
+    color: #fff0f0;
+    border: none;
+    border-radius: 17px;
+    padding: 22px 68px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 0.10em;
+    box-shadow: 0 2px 38px #ff232370;
+    margin-top: 22px;
+    cursor: pointer;
+    transition: background .19s linear, box-shadow 0.19s, transform 0.13s;
+    text-decoration: none;
+    text-shadow: 0 2px 10px #a22d2d;
+    margin-bottom: 0;
+    outline: none;
+    border: 2.2px solid #ff2323;
+    position: relative;
+    z-index: 3;
+}
+.tg-button:hover, .tg-button:focus {
+    background-position: right;
+    background-size: 300% 100%;
+    color: #ff2323;
+    border-color: #fff;
+    box-shadow: 0 0 48px #222 0 4px 24px #ff232395, 0 2px 16px #300618;
+    transform: scale(1.06) rotate(-2deg);
+    filter: drop-shadow(0 0 0.9rem #fff1);
+}
+
+/* Оригинальный дизайн и размеры для мобильных, аккуратно для иконок */
+@media (max-width: 650px) {
+    .container {
+        transform: none;
+        max-width: 97vw;
+        width: 99vw;
+        min-width: unset;
+        padding: 34px 4vw 26px 4vw;
+    }
+    .avatar {
+        width: 78px !important;
+        height: 78px !important;
+    }
+    .social-links {
+        gap: 17px;
+    }
+    .icon-link {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        min-height: 46px;
+        max-width: 46px;
+        max-height: 46px;
+    }
+    .icon-link svg {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        aspect-ratio: 1 / 1;
+    }
+    .about-message {
+        font-size: .87rem;
+        padding: 0 2vw;
+        max-width: 100vw;
+    }
+    .tg-button {
+        padding: 11px 5vw;
+        font-size: .91rem;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 1150px) {
+    .container {
+        max-width: 97vw;
+        width: 99vw;
+        min-width: unset;
+        padding: 34px 4vw 26px 4vw;
+    }
+    .avatar {
+        width: 118px;
+        height: 118px;
+    }
+    .title {
+        font-size: 1.70rem;
+    }
+    .subtitle {
+        font-size: 1.04rem;
+    }
+    .icon-link {
+        width: 71px;
+        height: 71px;
+    }
+    .icon-link svg {
+        width: 66px;
+        height: 66px;
+    }
+    .about-message {
+        font-size: 1.05rem;
+        max-width: 98vw;
+    }
+    .tg-button {
+        font-size: 1.02rem;
+        padding: 14px 19vw;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: #2a0101;
+}
+::-webkit-scrollbar-thumb {
+    background: #ff232388;
+    border-radius: 6px;
+}
